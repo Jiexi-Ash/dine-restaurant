@@ -8,21 +8,21 @@ import LogoImage from "../../public/assets/logo.svg";
 
 function Hero() {
   return (
-    <div className="relative w-full max-w-8xl">
+    <div className="relative w-full">
       <BgMobile />
       <BgTablet />
       <BgDesktop />
       <div className="absolute inset-0">
-        <div className="flex h-full w-full flex-col items-center lg:items-start lg:pl-24">
+        <div className="flex h-full w-full flex-col items-center lg:items-start lg:pl-[163px]">
           <div className="mt-64 md:mt-[420px] lg:mt-16">
             <Image src={LogoImage} alt="Logo" />
           </div>
 
-          <div className="mt-9 flex w-full flex-col  items-center text-center lg:mt-24 lg:items-start">
+          <div className="mt-9 flex w-full flex-col  items-center text-center lg:mt-[153px] lg:items-start">
             <h1 className="max-w-[280px] text-center text-[32px] font-light leading-10 tracking-[0.4px] text-white md:max-w-sm md:text-5xl md:leading-[64px] md:tracking-[-0.6px] lg:max-w-lg lg:text-left lg:text-7xl lg:leading-[80px] lg:tracking-[-1px]">
               Exquisite dining since 1989
             </h1>
-            <p className="mt-5 px-6 text-center text-[16px] leading-7 text-white md:max-w-2xl md:text-xl md:leading-8 lg:mt-[10px] lg:px-0 lg:text-left lg:text-[20px] lg:leading-8">
+            <p className="mt-5 max-w-sm px-6 text-center text-[16px] leading-7 text-white md:max-w-2xl md:text-xl md:leading-8 lg:mt-[10px] lg:max-w-md lg:px-0 lg:text-left lg:text-[20px] lg:leading-8">
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
             </p>
