@@ -8,13 +8,13 @@ import LogoImage from "../../public/assets/logo.svg";
 
 function Hero() {
   return (
-    <div className="relative w-full">
+    <div className="container relative mx-auto w-full max-w-8xl ">
       <BgMobile />
       <BgTablet />
       <BgDesktop />
       <div className="absolute inset-0">
         <div className="flex h-full w-full flex-col items-center lg:items-start lg:pl-[163px]">
-          <div className="mt-64 md:mt-[420px] lg:mt-16">
+          <div className="mt-64 md:mt-[320px] lg:mt-16">
             <Image src={LogoImage} alt="Logo" />
           </div>
 

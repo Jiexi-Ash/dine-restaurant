@@ -21,7 +21,14 @@ module.exports = {
       maxWidth: {
         "8xl": "1440px",
       },
+
+      backgroundImage: {
+        cta_image: "url('/public/assets/homepage/ready-bg-mobile@2x.jpg')",
+      },
+      fontFamily: {
+        spartan: ["Spartan", "sans-serif"],
+      },
     },
   },
-  plugins: [require("tailwindcss-debug-screens")],
+  plugins: [require("tailwind-scrollbar")],
 };
