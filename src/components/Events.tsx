@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import FamilyImage from "../../public/assets/homepage/family-gathering-mobile@2x.jpg";
+import FamilyImageTablet from "../../public/assets/homepage/family-gathering-tablet@2x.jpg";
 
 interface Props {
   title: string;
@@ -24,10 +25,17 @@ function Events() {
           alt="family gathering"
           width={326}
           height={400}
-          className="shadow-xl shadow-black/50"
+          className="block shadow-xl shadow-black/50 md:hidden"
+        />
+        <Image
+          src={FamilyImageTablet}
+          alt="family gathering"
+          width={573}
+          height={360}
+          className="hidden shadow-xl shadow-black/50 md:block"
         />
 
-        <div className="mt-12 flex w-full flex-col items-center justify-center">
+        <div className="mt-12 flex w-full flex-col items-center justify-center md:flex-row md:justify-between md:px-10">
           <Event
             title="Family Gathering"
             index={0}
@@ -54,7 +62,7 @@ function Events() {
           {selectedIndex === 2 && <SocialEvents />}
         </div>
 
-        <div className="mt-7 flex w-full justify-center">
+        <div className="mt-7 flex w-full justify-center md:mt-[60px]">
           <button className="w-[245px] bg-primaryCodGray py-6 text-[17px] font-semibold uppercase leading-4 tracking-[2.5px] text-white">
             Book a table
           </button>
@@ -69,7 +77,7 @@ export default Events;
 export const Event = ({ title, index, selectedIndex, handleClick }: Props) => {
   return (
     <div
-      className="mb-4 flex flex-col items-center justify-center  space-y-2 hover:cursor-pointer"
+      className="mb-4 flex flex-col items-center justify-center  space-y-2 hover:cursor-pointer  md:space-y-0"
       onClick={() => handleClick(index)}
     >
       <span
@@ -89,10 +97,10 @@ export const Event = ({ title, index, selectedIndex, handleClick }: Props) => {
 export const FamilyGathering = () => {
   return (
     <div>
-      <h2 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-ebonyClay">
+      <h2 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-ebonyClay md:text-5xl">
         Family Gathering
       </h2>
-      <p className="mt-3  max-w-[327px] text-center text-[16px]">
+      <p className="mt-3  max-w-[327px] text-center text-[16px] md:max-w-lg md:text-[20px]">
         We love catering for entire families. So please bring everyone along for
         a special meal with your loved ones. We’ll provide a memorable
         experience for all.
@@ -104,10 +112,10 @@ export const FamilyGathering = () => {
 export const SpecialEvents = () => {
   return (
     <div>
-      <h2 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-ebonyClay">
+      <h2 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-ebonyClay md:text-5xl">
         Special Events
       </h2>
-      <p className="mt-3  max-w-[327px] text-center text-[16px]">
+      <p className="mt-3  max-w-[327px] text-center text-[16px] md:max-w-lg md:text-[20px]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
         distinctio optio! Quasi, sed eveniet? Quaerat soluta mollitia quia eum
         illum minus?
@@ -119,10 +127,10 @@ export const SpecialEvents = () => {
 export const SocialEvents = () => {
   return (
     <div>
-      <h2 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-ebonyClay">
+      <h2 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-ebonyClay md:text-5xl">
         Social Events
       </h2>
-      <p className="mt-3  max-w-[327px] text-center text-[16px]">
+      <p className="mt-3  max-w-[327px] text-center text-[16px] md:max-w-lg md:text-[20px]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
         distinctio optio! Quasi, sed eveniet? Quaerat soluta mollitia quia eum
         illum minus?

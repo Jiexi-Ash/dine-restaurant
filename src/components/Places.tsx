@@ -20,11 +20,11 @@ function Places() {
           </div>
 
           <div className="mt-9 mb-[100px] flex flex-col items-center justify-center text-center">
-            <h2 className="max-w-[230px] text-3xl font-bold leading-10 tracking-[-0.4px] text-primaryCodGray">
+            <h2 className="max-w-[230px] text-3xl font-bold leading-10 tracking-[-0.4px] text-primaryCodGray md:max-w-[430px] md:text-5xl md:tracking-[-0.5px]">
               Enjoyable place for all the family
             </h2>
 
-            <p className="mt-3 max-w-[327px] text-center text-[16px] leading-6 text-ebonyClay md:max-w-[457px] ">
+            <p className="mt-3 max-w-[327px] text-center text-[16px] leading-6 text-ebonyClay md:mt-7 md:max-w-lg md:text-[20px] md:leading-8">
               Our relaxed surroundings make dining with us a great experience
               for everyone. We can even arrange a tour of the farm before your
               meal.
@@ -38,11 +38,11 @@ function Places() {
               <hr className="w-16 border-[1px] border-[#9E7F66] bg-[#9E7F66]" />
             </div>
             <div className="mt-9 mb-[100px] flex flex-col items-center justify-center text-center">
-              <h2 className="max-w-[230px] text-3xl font-bold leading-10 tracking-[-0.4px] text-primaryCodGray">
+              <h2 className="max-w-[230px] text-3xl font-bold leading-10 tracking-[-0.4px] text-primaryCodGray md:max-w-[430px] md:text-5xl md:tracking-[-0.5px]">
                 The most locally sourced food
               </h2>
 
-              <p className="mt-3 max-w-[327px] text-center text-[16px] leading-6 text-ebonyClay md:max-w-[457px]">
+              <p className="mt-3 max-w-[327px] text-center text-[16px] leading-6 text-ebonyClay md:mt-7 md:max-w-lg md:text-[20px] md:leading-8">
                 All our ingredients come directly from our farm or local
                 fishery. So you can be sure that you’re eating the freshest,
                 most sustainable food.

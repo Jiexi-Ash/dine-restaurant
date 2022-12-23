@@ -13,12 +13,12 @@ function CTA() {
       />
 
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="max-w-[250px]">
-          <h4 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-white">
+        <div className="max-w-[250px] md:max-w-5xl">
+          <h4 className="text-center text-[32px] font-bold leading-10 tracking-[-0.4px] text-white md:w-full md:text-5xl">
             Ready to make a reservation?
           </h4>
 
-          <div className="mt-7 flex w-full justify-center">
+          <div className="mt-7 flex w-full justify-center md:mt-6">
             <button className="w-[245px] border border-white py-6 text-[17px] font-semibold uppercase leading-4 tracking-[2.5px] text-white">
               Book a table
             </button>
