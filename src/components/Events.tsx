@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import FamilyImage from "../../public/assets/homepage/family-gathering-mobile@2x.jpg";
 import FamilyImageTablet from "../../public/assets/homepage/family-gathering-tablet@2x.jpg";
+import FamilyImageDesktop from "../../public/assets/homepage/family-gathering-desktop@2x.jpg";
+import EventsDesktop from "./EventsDesktop";
 
 interface Props {
   title: string;
@@ -18,57 +20,73 @@ function Events() {
   };
 
   return (
-    <div className="container mx-auto w-full max-w-8xl pt-20">
-      <div className="flex flex-col items-center justify-center px-6">
-        <Image
-          src={FamilyImage}
-          alt="family gathering"
-          width={326}
-          height={400}
-          className="block shadow-xl shadow-black/50 md:hidden"
-        />
-        <Image
-          src={FamilyImageTablet}
-          alt="family gathering"
-          width={573}
-          height={360}
-          className="hidden shadow-xl shadow-black/50 md:block"
-        />
+    <>
+      <div className="block lg:hidden">
+        <div className="container mx-auto w-full max-w-8xl pt-20">
+          <div className="flex flex-col items-center justify-center px-6 lg:flex-row">
+            <Image
+              src={FamilyImage}
+              alt="family gathering"
+              width={326}
+              height={400}
+              className="block shadow-xl shadow-black/50 md:hidden"
+            />
+            <Image
+              src={FamilyImageTablet}
+              alt="family gathering"
+              width={540}
+              height={600}
+              className="hidden shadow-xl shadow-black/50 md:block lg:hidden"
+            />
+            <Image
+              src={FamilyImageDesktop}
+              alt="family gathering"
+              width={573}
+              height={360}
+              className="hidden shadow-xl shadow-black/50 md:hidden lg:block"
+            />
 
-        <div className="mt-12 flex w-full flex-col items-center justify-center md:flex-row md:justify-between md:px-10">
-          <Event
-            title="Family Gathering"
-            index={0}
-            selectedIndex={selectedIndex}
-            handleClick={handleClick}
-          />
-          <Event
-            title="Special Events"
-            index={1}
-            selectedIndex={selectedIndex}
-            handleClick={handleClick}
-          />
-          <Event
-            title="Social Events"
-            index={2}
-            selectedIndex={selectedIndex}
-            handleClick={handleClick}
-          />
-        </div>
+            <div className="mt-12 flex w-full flex-col items-center justify-center md:flex-col md:px-10 lg:flex-col ">
+              <div className="flex w-full flex-col justify-between md:flex-row">
+                <Event
+                  title="Family Gathering"
+                  index={0}
+                  selectedIndex={selectedIndex}
+                  handleClick={handleClick}
+                />
+                <Event
+                  title="Special Events"
+                  index={1}
+                  selectedIndex={selectedIndex}
+                  handleClick={handleClick}
+                />
+                <Event
+                  title="Social Events"
+                  index={2}
+                  selectedIndex={selectedIndex}
+                  handleClick={handleClick}
+                />
+              </div>
 
-        <div className="mt-7">
-          {selectedIndex === 0 && <FamilyGathering />}
-          {selectedIndex === 1 && <SpecialEvents />}
-          {selectedIndex === 2 && <SocialEvents />}
-        </div>
+              <div className="mt-7">
+                {selectedIndex === 0 && <FamilyGathering />}
+                {selectedIndex === 1 && <SpecialEvents />}
+                {selectedIndex === 2 && <SocialEvents />}
+              </div>
 
-        <div className="mt-7 flex w-full justify-center md:mt-[60px]">
-          <button className="w-[245px] bg-primaryCodGray py-6 text-[17px] font-semibold uppercase leading-4 tracking-[2.5px] text-white">
-            Book a table
-          </button>
+              <div className="mt-7 flex w-full justify-center md:mt-[60px]">
+                <button className="w-[245px] bg-primaryCodGray py-6 text-[17px] font-semibold uppercase leading-4 tracking-[2.5px] text-white">
+                  Book a table
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="hidden lg:block">
+        <EventsDesktop />
+      </div>
+    </>
   );
 }
 

@@ -4,7 +4,7 @@ import CTAImage from "../../public/assets/homepage/ready-bg-mobile@2x.jpg";
 
 function CTA() {
   return (
-    <div className="relative mt-[124px] h-[328px] w-full">
+    <div className="container relative mx-auto mt-[124px] h-[328px] w-full max-w-8xl">
       <Image
         src={CTAImage}
         alt="CTA"

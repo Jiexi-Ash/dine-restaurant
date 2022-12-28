@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import SalmonMealImg from "../../public/assets/homepage/salmon-mobile@2x.jpg";
 import SalmonMealImgTablet from "../../public/assets/homepage/salmon-desktop-tablet@2x.jpg";
@@ -10,21 +9,24 @@ import ChocolateImageTablet from "../../public/assets/homepage/chocolate-desktop
 function Highlights() {
   return (
     <div className="container mx-auto w-full max-w-8xl bg-primaryCodGray">
-      <div className="pb-9 pt-[72px]">
-        <div className="flex items-center justify-center space-x-4">
-          <div className="h-4 w-4 rounded-full border-2 border-[#9E7F66]"></div>
-          <hr className="w-16 border-[1px] border-[#9E7F66] bg-[#9E7F66]" />
+      <div className="flex flex-col md:px-40 lg:flex-row lg:justify-evenly 2xl:justify-between">
+        <div>
+          <div className="pb-9 pt-[72px]">
+            <div className="flex items-center justify-center space-x-4 lg:justify-start">
+              <div className="h-4 w-4 rounded-full border-2 border-[#9E7F66]"></div>
+              <hr className="w-16 border-[1px] border-[#9E7F66] bg-[#9E7F66]" />
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <h2 className=" mx-auto w-full max-w-[400px]    px-6 text-center text-[32px]  font-bold leading-10 text-white md:max-w-md md:text-5xl md:leading-[48px] md:tracking-[-0.5px] lg:px-0 lg:text-left">
+              A few highlights from our menu
+            </h2>
+            <p className="mx-auto mt-5 w-full px-6 text-center text-[16px] leading-[26px] text-white md:max-w-md md:text-center md:text-[20px] lg:px-0 lg:text-left">
+              We cater for all dietary requirements, but here’s a glimpse at
+              some of our diner’s favourites. Our menu is revamped every season.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <h2 className=" mx-auto w-full max-w-[400px]    px-6 text-center text-[32px]  font-bold leading-10 text-white md:max-w-md md:text-5xl md:leading-[48px] md:tracking-[-0.5px]">
-          A few highlights from our menu
-        </h2>
-        <p className="mt-5 px-6 text-center text-[16px] leading-[26px] text-white md:max-w-[550px] md:text-center md:text-[20px]">
-          We cater for all dietary requirements, but here’s a glimpse at some of
-          our diner’s favourites. Our menu is revamped every season.
-        </p>
-
         <div className="flex flex-col divide-y-[1px] divide-white/30  px-6 md:mt-14 md:mb-24">
           <FoodContainer1 />
           <FoodContainer2 />

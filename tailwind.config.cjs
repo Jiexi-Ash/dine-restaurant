@@ -23,12 +23,12 @@ module.exports = {
       },
 
       backgroundImage: {
-        cta_image: "url('/public/assets/homepage/ready-bg-mobile@2x.jpg')",
+        "booking-hero": "url('/assets/booking/hero-bg-mobile@2x.jpg')",
       },
       fontFamily: {
         spartan: ["Spartan", "sans-serif"],
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar"), require("@tailwindcss/forms")],
 };

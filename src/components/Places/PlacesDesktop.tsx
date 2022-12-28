@@ -6,10 +6,10 @@ import ImageDesktop2 from "../../../public/assets/homepage/locally-sourced-deskt
 function PlacesDesktop() {
   return (
     <>
-      <div className="mt-[128px] flex w-full justify-between px-[163px]">
+      <div className="mt-[128px] flex w-full justify-between px-40 lg:justify-evenly 2xl:justify-between">
         <PlacesImageDesktop1 />
 
-        <div>
+        <div className="lg:ml-12">
           <h2 className="w-full max-w-[400px] text-5xl font-bold leading-[48px] tracking-[-0.5px]">
             Enjoyable place for all the family
           </h2>
@@ -49,7 +49,7 @@ export const PlacesImageDesktop1 = () => {
         width={540}
         height={720}
         // put the image in the center
-        className="relative top-[120px] -translate-y-1/2 transform  shadow-xl shadow-black/50"
+        className="relative top-[120px] -translate-y-1/2 transform  shadow-xl shadow-black/50 lg:top-[100px] 2xl:top-[120px]"
       />
     </div>
   );
@@ -64,7 +64,7 @@ export const PlacesImageDesktop2 = () => {
         width={540}
         height={720}
         // put the image in the center
-        className="relative top-[120px] -translate-y-1/2 transform  shadow-xl shadow-black/50"
+        className="relative top-[120px] -translate-y-1/2 transform  shadow-xl shadow-black/50 lg:top-[100px] 2xl:top-[120px]"
       />
     </div>
   );
